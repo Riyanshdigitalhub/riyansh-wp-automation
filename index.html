@@ -3,64 +3,1336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Digital Asset Bundle</title>
+    <title>Premium Digital Asset Bundle - Lifetime Access | 500+ Templates & Resources</title>
+    <meta name="description" content="Get instant access to 500+ premium Canva templates, social media assets, ChatGPT prompts, business resources, and marketing materials. Lifetime access for just ₹499.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: '#6366f1',
-                        secondary: '#4f46e5',
-                    }
+                        secondary: '#8b5cf6',
+                        accent: '#f59e0b',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Poppins', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'scroll': 'scroll 30s linear infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s linear infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                    },
                 }
             }
         }
     </script>
     <style>
-        .lazy-img { opacity: 0; transition: opacity 0.3s ease-in-out; }
-        .lazy-img.loaded { opacity: 1; }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        .accordion-content.active { max-height: 1000px; }
-        .chevron { transition: transform 0.3s ease; }
-        .chevron.rotate { transform: rotate(180deg); }
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+
+        /* Glassmorphism Effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Premium Gradients */
+        .gradient-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+        }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+            background-size: 200% 200%;
+            animation: gradient 6s ease infinite;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%, #0f172a 100%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .hover-glow {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Trust Ticker */
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+        
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        /* Button Styles */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+        
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Card Animations */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateZ(10px);
+        }
+
+        /* Progress Bar Animation */
+        @keyframes progress-fill {
+            from { width: 0; }
+        }
+        
+        .progress-bar {
+            animation: progress-fill 2s ease-out forwards;
+        }
+
+        /* Floating Elements */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .floating-delayed {
+            animation: float 3s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+
+        /* Badge Pulse */
+        .badge-pulse {
+            animation: pulse-slow 2s infinite;
+        }
+
+        /* Image Lazy Load */
+        .lazy-img {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .lazy-img.loaded {
+            opacity: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e1b4b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 5px;
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Grid Pattern Background */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Dotted Pattern */
+        .dotted-pattern {
+            background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Shine Effect */
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255,255,255,0.1) 50%,
+                transparent 70%
+            );
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* Count Up Animation */
+        .count-up {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Checkmark Animation */
+        @keyframes checkmark {
+            0% { stroke-dashoffset: 100; }
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        .checkmark-path {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: checkmark 0.5s ease forwards;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.1 !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
     
+    <!-- Trust Ticker - Before Hero Section -->
+    <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 py-3 overflow-hidden border-b border-white/10">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Instant Download</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Lifetime Access</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Secure Payment</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">7-Day Support Guarantee</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Commercial Usage Rights</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Instant Download</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Lifetime Access</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Secure Payment</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">7-Day Support Guarantee</span>
+                </div>
+                <div class="ticker-item">
+                    <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span class="text-white/90 text-sm font-medium">Commercial Usage Rights</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <header class="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white pt-20 pb-24 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-30"></div>
+    <header class="relative gradient-hero text-white pt-24 pb-32 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 dotted-pattern opacity-50"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl floating"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl floating-delayed"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-indigo-500/10 to-transparent rounded-full"></div>
+        
         <div class="container mx-auto px-6 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6 border border-white/20">🚀 Limited Time Offer</span>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
-                Ultimate Digital <br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-purple-200">Asset Bundle</span>
+            <!-- Urgency Badge -->
+            <div class="inline-flex items-center gap-2 py-2 px-4 rounded-full glass-card mb-8 badge-pulse reveal">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                </span>
+                <span class="text-sm font-semibold tracking-wide">🔥 LIMITED TIME OFFER - ENDS SOON</span>
+            </div>
+            
+            <!-- Main Headline -->
+            <h1 class="hero-title text-4xl sm:text-5xl md:text-7xl font-black mb-8 tracking-tight leading-tight reveal-scale">
+                The Ultimate <span class="text-gradient">Digital Asset Bundle</span><br/>
+                <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white/90 mt-4 block">For Modern Creators & Entrepreneurs</span>
             </h1>
-            <p class="text-xl text-indigo-100 mb-10 max-w-2xl mx-auto font-light">
-                Get access to 500+ premium templates, icons, and UI kits. Everything you need to launch your next project faster.
+            
+            <!-- Subheadline with Enhanced Copy -->
+            <p class="text-lg sm:text-xl text-indigo-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed reveal">
+                Unlock instant access to <strong class="text-white font-semibold">500+ premium Canva templates, social media assets, ChatGPT prompts, business resources, marketing materials</strong>, and so much more. Everything you need to launch faster, scale smarter, and dominate your niche — all in one incredible bundle.
             </p>
             
-            <!-- Price Anchoring -->
-            <div class="flex items-center justify-center gap-4 mb-8">
-                <span class="text-2xl text-indigo-300 line-through decoration-2">₹1,999</span>
-                <span class="text-5xl font-bold text-white">₹499</span>
-                <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded uppercase">75% Off</span>
+            <!-- Social Proof Stats -->
+            <div class="flex flex-wrap justify-center gap-6 mb-10 reveal-left">
+                <div class="glass-card py-3 px-6 rounded-xl">
+                    <div class="text-2xl font-bold text-white">500+</div>
+                    <div class="text-xs text-indigo-300 uppercase tracking-wide">Premium Assets</div>
+                </div>
+                <div class="glass-card py-3 px-6 rounded-xl">
+                    <div class="text-2xl font-bold text-white">10,000+</div>
+                    <div class="text-xs text-indigo-300 uppercase tracking-wide">Happy Customers</div>
+                </div>
+                <div class="glass-card py-3 px-6 rounded-xl">
+                    <div class="text-2xl font-bold text-white">4.9/5</div>
+                    <div class="text-xs text-indigo-300 uppercase tracking-wide">Average Rating</div>
+                </div>
+            </div>
+            
+            <!-- Price Anchoring with Enhanced Visual Hierarchy -->
+            <div class="flex flex-col items-center justify-center gap-4 mb-10 reveal-scale">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl text-indigo-300 line-through decoration-4 decoration-red-500">₹65,000</span>
+                    <span class="text-6xl sm:text-7xl font-black text-white gradient-gold bg-clip-text text-transparent">₹499</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wide shadow-lg animate-pulse">Save 99% Today</span>
+                    <span class="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wide shadow-lg">Best Value</span>
+                </div>
             </div>
 
-            <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" 
-                    class="bg-white text-indigo-900 hover:bg-indigo-50 font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg">
-                Explore Bundle
-            </button>
+            <!-- Primary CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 reveal">
+                <button onclick="document.getElementById('bundle-showcase').scrollIntoView({behavior: 'smooth'})" 
+                        class="btn-premium gradient-primary text-white font-bold py-5 px-12 rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all transform hover:-translate-y-2 text-xl min-w-[280px]">
+                    🚀 Get Instant Access Now
+                </button>
+                <button onclick="document.getElementById('whats-inside').scrollIntoView({behavior: 'smooth'})" 
+                        class="glass-card text-white font-semibold py-5 px-10 rounded-full border-2 border-white/30 hover:bg-white/20 transition-all transform hover:-translate-y-1 text-lg">
+                    👀 See What's Inside
+                </button>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-4 text-sm text-indigo-300 reveal-left">
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Instant Digital Delivery
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Secure Checkout
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    Lifetime Updates
+                </span>
+            </div>
+        </div>
+        
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f9fafb"/>
+            </svg>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="products" class="container mx-auto px-6 py-16 -mt-10 relative z-20">
+    <!-- Who Is This Bundle For? Section -->
+    <section class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-30"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block py-2 px-4 rounded-full bg-indigo-100 text-indigo-700 text-sm font-bold uppercase tracking-wide mb-4">Perfect For You If...</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Who Is This <span class="text-gradient">Bundle For?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Whether you're a seasoned professional or just starting out, this bundle is designed to accelerate your success. Here's exactly who will benefit the most:
+                </p>
+            </div>
+
+            <!-- Target Audience Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <!-- Freelancers -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d">
+                    <div class="gradient-primary p-6 text-center">
+                        <div class="text-6xl mb-3">👨‍💻</div>
+                        <h3 class="text-xl font-bold text-white">Freelancers</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Deliver exceptional results to clients faster with ready-to-use templates and assets that make you look like a pro agency.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Win more projects</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Reduce delivery time</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Increase profit margins</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Graphic Designers -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d" style="transition-delay: 100ms;">
+                    <div class="gradient-primary p-6 text-center" style="animation-delay: 0.5s;">
+                        <div class="text-6xl mb-3">🎨</div>
+                        <h3 class="text-xl font-bold text-white">Graphic Designers</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Skip the blank canvas syndrome. Start with professionally designed templates and customize them to match your unique creative vision.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Speed up workflow</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Inspire creativity</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Expand service offerings</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Digital Marketers -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d" style="transition-delay: 200ms;">
+                    <div class="gradient-primary p-6 text-center" style="animation-delay: 1s;">
+                        <div class="text-6xl mb-3">📈</div>
+                        <h3 class="text-xl font-bold text-white">Digital Marketers</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Launch high-converting campaigns in record time. From social posts to funnel templates, everything you need to drive results.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Launch campaigns faster</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Boost engagement rates</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Generate quality leads</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Agency Owners -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d" style="transition-delay: 300ms;">
+                    <div class="gradient-primary p-6 text-center" style="animation-delay: 1.5s;">
+                        <div class="text-6xl mb-3">🏢</div>
+                        <h3 class="text-xl font-bold text-white">Agency Owners</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Scale your agency without scaling your team. Equip your entire team with premium assets and deliver consistent quality across all projects.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Scale operations</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Maintain brand consistency</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Maximize profitability</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Content Creators -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d">
+                    <div class="gradient-primary p-6 text-center">
+                        <div class="text-6xl mb-3">📹</div>
+                        <h3 class="text-xl font-bold text-white">Content Creators</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Create scroll-stopping content daily without burning out. Thumbnails, posts, reels, and more — all optimized for maximum engagement.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Post consistently</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Grow your audience</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Monetize effectively</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coaches -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d" style="transition-delay: 100ms;">
+                    <div class="gradient-primary p-6 text-center" style="animation-delay: 0.5s;">
+                        <div class="text-6xl mb-3">🎯</div>
+                        <h3 class="text-xl font-bold text-white">Coaches</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Build authority and attract ideal clients with professional marketing materials. Worksheets, guides, and presentations included.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Establish credibility</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Create lead magnets</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Deliver value-packed content</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- YouTubers -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d" style="transition-delay: 200ms;">
+                    <div class="gradient-primary p-6 text-center" style="animation-delay: 1s;">
+                        <div class="text-6xl mb-3">🎬</div>
+                        <h3 class="text-xl font-bold text-white">YouTubers</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Get click-worthy thumbnails, channel art, end screens, and video templates designed to boost CTR and subscriber growth.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Increase CTR</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Professional branding</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Save editing time</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Small Business Owners -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover-lift reveal-scale card-3d" style="transition-delay: 300ms;">
+                    <div class="gradient-primary p-6 text-center" style="animation-delay: 1.5s;">
+                        <div class="text-6xl mb-3">🏪</div>
+                        <h3 class="text-xl font-bold text-white">Small Business Owners</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Compete with big brands on a small budget. Get everything needed for professional marketing without hiring expensive designers.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Look professional</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Save thousands on design</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span class="text-gray-700">Attract more customers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA After Section -->
+            <div class="text-center mt-16 reveal">
+                <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                        class="btn-premium gradient-primary text-white font-bold py-5 px-12 rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all transform hover:-translate-y-2 text-xl">
+                    🔥 Yes! This Bundle Is Perfect For Me - Get Instant Access
+                </button>
+                <p class="mt-4 text-gray-500 text-sm">Join 10,000+ satisfied creators who transformed their workflow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens If You Buy Everything Separately? Section -->
+    <section class="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 relative overflow-hidden">
+        <div class="absolute inset-0 dotted-pattern opacity-20"></div>
+        <div class="absolute top-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl floating"></div>
+        <div class="absolute bottom-20 left-20 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl floating-delayed"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block py-2 px-4 rounded-full bg-white/10 text-white text-sm font-bold uppercase tracking-wide mb-4 backdrop-blur-sm">💰 The Math Is Simple</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-6">
+                    What Happens If You Buy <span class="text-gradient-gold">Everything Separately?</span>
+                </h2>
+                <p class="text-xl text-indigo-200 max-w-3xl mx-auto leading-relaxed">
+                    Let's break down the real cost of purchasing these premium resources individually from various marketplaces and providers...
+                </p>
+            </div>
+
+            <!-- Comparison Cards -->
+            <div class="max-w-5xl mx-auto">
+                <!-- Card 1: Canva Templates -->
+                <div class="glass-card rounded-2xl p-6 mb-4 flex justify-between items-center hover-lift reveal-left">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center text-3xl">📄</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Canva Templates Pack</h3>
+                            <p class="text-indigo-300 text-sm">Professional designs for every occasion</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold text-white">₹15,000+</div>
+                        <div class="text-xs text-indigo-400">Market Price</div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Faceless Reels -->
+                <div class="glass-card rounded-2xl p-6 mb-4 flex justify-between items-center hover-lift reveal-left" style="transition-delay: 100ms;">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center text-3xl">🎥</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Faceless Reels Pack</h3>
+                            <p class="text-indigo-300 text-sm">Viral-ready short-form video templates</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold text-white">₹10,000+</div>
+                        <div class="text-xs text-indigo-400">Market Price</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: ChatGPT Prompts -->
+                <div class="glass-card rounded-2xl p-6 mb-4 flex justify-between items-center hover-lift reveal-left" style="transition-delay: 200ms;">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center text-3xl">🤖</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">ChatGPT Prompts Library</h3>
+                            <p class="text-indigo-300 text-sm">AI-powered content generation scripts</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold text-white">₹20,000+</div>
+                        <div class="text-xs text-indigo-400">Market Price</div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Business Resources -->
+                <div class="glass-card rounded-2xl p-6 mb-4 flex justify-between items-center hover-lift reveal-left" style="transition-delay: 300ms;">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl">💼</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Business Resources Kit</h3>
+                            <p class="text-indigo-300 text-sm">Documents, contracts, and planning tools</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold text-white">₹8,000+</div>
+                        <div class="text-xs text-indigo-400">Market Price</div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Funnels & Marketing Assets -->
+                <div class="glass-card rounded-2xl p-6 mb-8 flex justify-between items-center hover-lift reveal-left" style="transition-delay: 400ms;">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-3xl">🎯</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Funnels & Marketing Assets</h3>
+                            <p class="text-indigo-300 text-sm">Complete sales funnel templates & ads</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-2xl font-bold text-white">₹12,000+</div>
+                        <div class="text-xs text-indigo-400">Market Price</div>
+                    </div>
+                </div>
+
+                <!-- Total Comparison -->
+                <div class="glass-card rounded-3xl p-8 mb-8 reveal-scale border-2 border-yellow-500/50">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Total Market Value</h3>
+                            <p class="text-indigo-300">If purchased separately from various providers</p>
+                            <div class="text-5xl font-black text-white mt-4 line-through decoration-4 decoration-red-500">₹65,000+</div>
+                        </div>
+                        <div class="text-center md:text-right">
+                            <h3 class="text-2xl font-bold text-green-400 mb-2">Today Only - Bundle Price</h3>
+                            <p class="text-indigo-300">One-time payment, lifetime access</p>
+                            <div class="text-7xl font-black gradient-gold bg-clip-text text-transparent mt-4">₹499</div>
+                            <div class="inline-block mt-4 bg-red-500 text-white font-bold px-6 py-2 rounded-full animate-pulse">YOU SAVE ₹64,501 (99% OFF)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Proposition Box -->
+                <div class="glass-card-light rounded-2xl p-8 reveal">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">🎁 Plus, You're Getting ALL These Bonuses FREE:</h3>
+                        <div class="flex flex-wrap justify-center gap-3 mb-6">
+                            <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold">✅ Commercial License</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold">✅ Lifetime Updates</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold">✅ Priority Support</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold">✅ Video Tutorials</span>
+                            <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold">✅ Community Access</span>
+                        </div>
+                        <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                                class="btn-premium gradient-gold text-gray-900 font-black py-5 px-12 rounded-full shadow-2xl hover:shadow-yellow-500/50 transition-all transform hover:-translate-y-2 text-xl">
+                            🔥 CLAIM THIS INSANE DEAL NOW
+                        </button>
+                        <p class="mt-4 text-gray-600 text-sm">⚠️ Warning: This offer expires soon. Don't miss out!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- See What's Inside - Mega Showcase Section -->
+    <section id="whats-inside" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-20"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block py-2 px-4 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm font-bold uppercase tracking-wide mb-4">📦 Massive Collection</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    See What's <span class="text-gradient">Inside The Bundle</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    15+ comprehensive categories packed with premium assets. Everything you need to create, market, and scale your business — all in one place.
+                </p>
+            </div>
+
+            <!-- 15 Category Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                
+                <!-- Card 1: Canva Templates -->
+                <div class="group bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-200 hover-lift reveal-scale card-3d">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">📄</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Canva Templates</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded">200+ Files</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Professional designs for social media, presentations, marketing materials, and more.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Save 10+ hours per project
+                    </div>
+                </div>
+
+                <!-- Card 2: Instagram Posts -->
+                <div class="group bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 border border-purple-200 hover-lift reveal-scale card-3d" style="transition-delay: 50ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">📸</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Instagram Posts</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">150+ Templates</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Engaging post templates optimized for likes, comments, and shares.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Boost engagement by 3x
+                    </div>
+                </div>
+
+                <!-- Card 3: Reels Pack -->
+                <div class="group bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-6 border border-red-200 hover-lift reveal-scale card-3d" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🎬</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Reels Pack</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">100+ Videos</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Viral-ready short-form video templates with trending hooks and transitions.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Go viral faster
+                    </div>
+                </div>
+
+                <!-- Card 4: YouTube Assets -->
+                <div class="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200 hover-lift reveal-scale card-3d" style="transition-delay: 150ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">▶️</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">YouTube Assets</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">80+ Files</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Thumbnails, end screens, intros, and channel art that boost CTR.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Increase CTR by 50%
+                    </div>
+                </div>
+
+                <!-- Card 5: ChatGPT Prompts -->
+                <div class="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200 hover-lift reveal-scale card-3d">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🤖</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">ChatGPT Prompts</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">500+ Prompts</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">AI-powered prompts for content creation, marketing, and business growth.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        10x content output
+                    </div>
+                </div>
+
+                <!-- Card 6: Midjourney Prompts -->
+                <div class="group bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-6 border border-violet-200 hover-lift reveal-scale card-3d" style="transition-delay: 50ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Midjourney Prompts</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-violet-500 text-white text-xs font-bold px-2 py-1 rounded">300+ Prompts</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Create stunning AI art with proven prompt formulas and styles.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Professional AI artwork
+                    </div>
+                </div>
+
+                <!-- Card 7: Sales Funnels -->
+                <div class="group bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 border border-amber-200 hover-lift reveal-scale card-3d" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Sales Funnels</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">25+ Funnels</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Complete funnel templates that convert visitors into paying customers.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Double conversion rates
+                    </div>
+                </div>
+
+                <!-- Card 8: Lead Magnets -->
+                <div class="group bg-gradient-to-br from-teal-50 to-green-50 rounded-2xl p-6 border border-teal-200 hover-lift reveal-scale card-3d" style="transition-delay: 150ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-green-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🧲</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Lead Magnets</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded">50+ Templates</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Irresistible freebies that grow your email list on autopilot.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Build email list fast
+                    </div>
+                </div>
+
+                <!-- Card 9: Ebooks -->
+                <div class="group bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-6 border border-indigo-200 hover-lift reveal-scale card-3d">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Ebooks</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded">30+ Templates</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Professional ebook layouts for lead generation or digital products.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Create products in hours
+                    </div>
+                </div>
+
+                <!-- Card 10: Business Documents -->
+                <div class="group bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-6 border border-slate-200 hover-lift reveal-scale card-3d" style="transition-delay: 50ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-slate-500 to-gray-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">💼</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Business Documents</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-slate-500 text-white text-xs font-bold px-2 py-1 rounded">40+ Files</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Contracts, proposals, invoices, and planning templates.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Look professional instantly
+                    </div>
+                </div>
+
+                <!-- Card 11: Social Media Kits -->
+                <div class="group bg-gradient-to-br from-pink-50 to-fuchsia-50 rounded-2xl p-6 border border-pink-200 hover-lift reveal-scale card-3d" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-fuchsia-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">📱</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Social Media Kits</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded">200+ Assets</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Complete branding kits for all major social platforms.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Consistent branding everywhere
+                    </div>
+                </div>
+
+                <!-- Card 12: AI Resources -->
+                <div class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-200 hover-lift reveal-scale card-3d" style="transition-delay: 150ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">✨</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">AI Resources</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded">100+ Tools</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Curated list of AI tools and workflows to automate your business.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Automate repetitive tasks
+                    </div>
+                </div>
+
+                <!-- Card 13: Marketing Templates -->
+                <div class="group bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 border border-orange-200 hover-lift reveal-scale card-3d">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">📢</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Marketing Templates</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">100+ Files</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Ad creatives, email templates, and campaign materials.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Launch campaigns faster
+                    </div>
+                </div>
+
+                <!-- Card 14: Branding Assets -->
+                <div class="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-6 border border-cyan-200 hover-lift reveal-scale card-3d" style="transition-delay: 50ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">🏷️</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Branding Assets</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-cyan-500 text-white text-xs font-bold px-2 py-1 rounded">75+ Files</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Logos, color palettes, typography guides, and brand guidelines.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Build memorable brands
+                    </div>
+                </div>
+
+                <!-- Card 15: Digital Products -->
+                <div class="group bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-6 border border-rose-200 hover-lift reveal-scale card-3d" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform">💎</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Products</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded">50+ Templates</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">Ready-to-sell digital products for passive income streams.</p>
+                    <div class="flex items-center gap-2 text-xs text-green-600 font-semibold">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Start earning passive income
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA After Section -->
+            <div class="text-center mt-16 reveal">
+                <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                        class="btn-premium gradient-primary text-white font-bold py-5 px-12 rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all transform hover:-translate-y-2 text-xl">
+                    🎁 Get All 15 Categories For Just ₹499
+                </button>
+                <p class="mt-4 text-gray-500 text-sm">That's less than ₹33 per category! Unbeatable value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results & Outcomes Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden">
+        <div class="absolute inset-0 dotted-pattern opacity-10"></div>
+        <div class="absolute top-20 left-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl floating"></div>
+        <div class="absolute bottom-20 right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl floating-delayed"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block py-2 px-4 rounded-full bg-white/10 text-white text-sm font-bold uppercase tracking-wide mb-4 backdrop-blur-sm">🎯 Real Results</span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-6">
+                    What Can You Actually <span class="text-gradient-gold">Achieve Using This Bundle?</span>
+                </h2>
+                <p class="text-xl text-indigo-200 max-w-3xl mx-auto leading-relaxed">
+                    This isn't just another template pack. It's a complete transformation toolkit that delivers measurable results for your business.
+                </p>
+            </div>
+
+            <!-- Outcome Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Outcome 1: Save Design Costs -->
+                <div class="glass-card rounded-2xl p-8 text-center hover-lift reveal-scale">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 floating">💰</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Save ₹50,000+ on Design Costs</h3>
+                    <p class="text-indigo-200 leading-relaxed">Stop paying expensive designers for every little task. With this bundle, you have everything needed to create professional designs yourself — saving thousands every month.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="text-3xl font-black text-green-400">₹50,000+</div>
+                        <div class="text-sm text-indigo-300">Potential Savings</div>
+                    </div>
+                </div>
+
+                <!-- Outcome 2: Launch Faster -->
+                <div class="glass-card rounded-2xl p-8 text-center hover-lift reveal-scale" style="transition-delay: 100ms;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 floating-delayed">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Launch Projects 10x Faster</h3>
+                    <p class="text-indigo-200 leading-relaxed">No more starting from scratch. Use our ready-made templates to launch campaigns, products, and content in minutes instead of weeks.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="text-3xl font-black text-blue-400">10x</div>
+                        <div class="text-sm text-indigo-300">Faster Execution</div>
+                    </div>
+                </div>
+
+                <!-- Outcome 3: Get More Clients -->
+                <div class="glass-card rounded-2xl p-8 text-center hover-lift reveal-scale" style="transition-delay: 200ms;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 floating">🤝</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Get More High-Paying Clients</h3>
+                    <p class="text-indigo-200 leading-relaxed">Impress prospects with professional proposals, portfolios, and presentations. Close more deals with materials that scream quality and expertise.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="text-3xl font-black text-purple-400">2-3x</div>
+                        <div class="text-sm text-indigo-300">More Conversions</div>
+                    </div>
+                </div>
+
+                <!-- Outcome 4: Build Social Presence -->
+                <div class="glass-card rounded-2xl p-8 text-center hover-lift reveal-scale">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 floating-delayed">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Build a Powerful Social Presence</h3>
+                    <p class="text-indigo-200 leading-relaxed">Post consistently with engaging content that stops the scroll. Grow your following and establish authority in your niche without spending hours designing.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="text-3xl font-black text-orange-400">10K+</div>
+                        <div class="text-sm text-indigo-300">Avg. Follower Growth</div>
+                    </div>
+                </div>
+
+                <!-- Outcome 5: Create Content Daily -->
+                <div class="glass-card rounded-2xl p-8 text-center hover-lift reveal-scale" style="transition-delay: 100ms;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 floating">📝</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Create Content Daily Without Burnout</h3>
+                    <p class="text-indigo-200 leading-relaxed">Never face creator's block again. With hundreds of templates and AI prompts, you'll have endless content ideas ready to customize and publish.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="text-3xl font-black text-yellow-400">Daily</div>
+                        <div class="text-sm text-indigo-300">Content Output</div>
+                    </div>
+                </div>
+
+                <!-- Outcome 6: Improve Productivity -->
+                <div class="glass-card rounded-2xl p-8 text-center hover-lift reveal-scale" style="transition-delay: 200ms;">
+                    <div class="w-20 h-20 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 floating-delayed">⚡</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Improve Productivity by 300%</h3>
+                    <p class="text-indigo-200 leading-relaxed">Automate repetitive design tasks and focus on what really matters — growing your business, serving clients, and creating strategy.</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <div class="text-3xl font-black text-indigo-400">300%</div>
+                        <div class="text-sm text-indigo-300">Productivity Boost</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA After Section -->
+            <div class="text-center mt-16 reveal">
+                <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                        class="btn-premium gradient-gold text-gray-900 font-black py-5 px-12 rounded-full shadow-2xl hover:shadow-yellow-500/50 transition-all transform hover:-translate-y-2 text-xl">
+                    ✨ Yes! I Want These Results - Get Instant Access Now
+                </button>
+                <p class="mt-4 text-indigo-300 text-sm">Join thousands of successful creators who transformed their workflow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Reversal Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-30"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-block py-2 px-4 rounded-full bg-green-100 text-green-700 text-sm font-bold uppercase tracking-wide mb-4">🛡️ 100% Safe Purchase</span>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Zero Risk <span class="text-gradient">Purchase Guarantee</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We're so confident you'll love this bundle that we're removing all risk from your decision. Here's exactly what you get:
+                </p>
+            </div>
+
+            <!-- Risk Reversal Features Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                
+                <!-- Feature 1: Secure Checkout -->
+                <div class="flex items-start gap-4 reveal-left">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">🔒</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Secure Checkout</h3>
+                        <p class="text-gray-600 text-sm">Your payment information is protected with industry-leading encryption. We never store your card details.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Instant Delivery -->
+                <div class="flex items-start gap-4 reveal-left" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">⚡</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Instant Delivery</h3>
+                        <p class="text-gray-600 text-sm">Get immediate access to all files right after purchase. No waiting, no delays — start using within seconds.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Beginner Friendly -->
+                <div class="flex items-start gap-4 reveal-left" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">👶</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Beginner Friendly</h3>
+                        <p class="text-gray-600 text-sm">No design experience needed. Our templates are drag-and-drop simple with video tutorials included.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4: No Monthly Fees -->
+                <div class="flex items-start gap-4 reveal-left">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">💳</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">No Monthly Fees</h3>
+                        <p class="text-gray-600 text-sm">One-time payment of ₹499. That's it. No subscriptions, no hidden charges, no surprises.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Lifetime Access -->
+                <div class="flex items-start gap-4 reveal-left" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">♾️</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Lifetime Access</h3>
+                        <p class="text-gray-600 text-sm">Access your files forever. Download anytime, anywhere. Plus get all future updates at no extra cost.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6: 7-Day Support -->
+                <div class="flex items-start gap-4 reveal-left" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-400 to-green-500 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">💬</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">7-Day Support Guarantee</h3>
+                        <p class="text-gray-600 text-sm">Have questions? Our support team is here to help you succeed. Quick responses guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guarantee Badge Box -->
+            <div class="max-w-3xl mx-auto glass-card-light rounded-3xl p-8 reveal-scale">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div class="text-center text-white">
+                            <div class="text-4xl font-black">100%</div>
+                            <div class="text-sm">Guaranteed</div>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Our Iron-Clad Money-Back Guarantee</h3>
+                        <p class="text-gray-600 leading-relaxed">If you're not completely satisfied with your purchase for any reason, simply contact us within 7 days and we'll refund your entire payment. No questions asked. No hard feelings. Your satisfaction is our priority.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="text-center mt-16 reveal">
+                <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                        class="btn-premium gradient-primary text-white font-black py-6 px-16 rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all transform hover:-translate-y-2 text-2xl">
+                    🔐 Get Instant Access Risk-Free - ₹499 Only
+                </button>
+                <p class="mt-4 text-gray-500 text-sm">Protected by our 7-day money-back guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content (Legacy accordion section preserved) -->
+    <main id="products" class="container mx-auto px-6 py-16 relative z-20 bg-gray-50">
         
         <!-- Accordion Categories -->
         <div class="max-w-4xl mx-auto space-y-4 mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">What's Inside?</h2>
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Browse By Category</h2>
             
             <!-- Category 1 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
@@ -101,7 +1373,7 @@
         <!-- Interactive Grid (All Items) -->
         <div class="mt-20">
             <div class="flex justify-between items-end mb-8">
-                <h2 class="text-3xl font-bold text-gray-800">Featured Assets</h2>
+                <h2 class="text-3xl font-bold text-gray-800">Featured Assets Preview</h2>
                 <span class="text-sm text-gray-500">Instant Download • Commercial License</span>
             </div>
             <div id="asset-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -109,14 +1381,61 @@
             </div>
         </div>
 
+        <!-- CTA Block -->
+        <div class="text-center mt-16">
+            <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                    class="btn-premium gradient-primary text-white font-bold py-5 px-12 rounded-full shadow-2xl hover:shadow-indigo-500/50 transition-all transform hover:-translate-y-2 text-xl">
+                🎯 Get Full Access To All Assets - ₹499
+            </button>
+        </div>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-12 mt-20">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2023 Premium Bundles. All rights reserved.</p>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Premium Digital Bundle</h3>
+                    <p class="text-sm leading-relaxed">The ultimate collection of templates, assets, and resources for modern creators and entrepreneurs.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#whats-inside" class="hover:text-white transition-colors">What's Inside</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Browse Assets</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">License Agreement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 Premium Digital Bundle. All rights reserved.</p>
+                <p class="mt-2">This site is not part of Facebook or Google. We do not sell your personal information.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div id="sticky-cta" class="sticky-cta bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 text-white py-4 px-6 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <div class="text-sm font-semibold">Get Instant Lifetime Access</div>
+                <div class="text-xl font-black text-yellow-400">₹499 <span class="text-xs text-gray-400 line-through font-normal">₹65,000</span></div>
+            </div>
+            <button onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 font-bold py-3 px-6 rounded-full hover:shadow-lg transition-all transform hover:scale-105">
+                Buy Now
+            </button>
+        </div>
+    </div>
 
     <script>
         // Data for assets
@@ -229,6 +1548,42 @@
         firstContent.classList.add('active');
         firstContent.previousElementSibling.querySelector('.chevron').classList.add('rotate');
         populateGrid(firstContent.querySelector('.grid'), 4);
+
+        // Scroll Animations Observer
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Sticky CTA Visibility Toggle
+        function initStickyCTA() {
+            const stickyCTA = document.getElementById('sticky-cta');
+            const heroSection = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                const heroBottom = heroSection.getBoundingClientRect().bottom;
+                if (heroBottom < 0) {
+                    stickyCTA.classList.add('visible');
+                } else {
+                    stickyCTA.classList.remove('visible');
+                }
+            });
+        }
+
+        // Initialize all scripts on DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+            initStickyCTA();
+        });
 
     </script>
 </body>
